@@ -1,0 +1,48 @@
+form{
+    width: 70%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+    text-align: left;
+
+    grid-template-areas:
+     "i l"
+     "j j"
+     "b b";
+  
+}
+
+
+#item1{
+    grid-area: i;
+}
+
+#item2{
+    grid-area: l;
+}
+
+#item3{
+    grid-area: j;
+}
+
+.form-btn{
+    grid-area: b;
+    width: 20%;
+    margin: auto;
+}
+.error {
+    border: 2px red solid;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+  
+  }
+
+
