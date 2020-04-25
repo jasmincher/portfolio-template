@@ -7,21 +7,13 @@ import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import { Route, Switch } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
-import { createMuiTheme, ThemeProvider } from "@material-ui/core/";
 
 function App() {
-  const theme = createMuiTheme({
-    palette: {
-      type: "dark",
-    },
-  });
 
   return (
     <BrowserRouter>
-      <ThemeProvider theme={theme}>
         <div className="App">
           <Navbar />
-
           <Switch>
             <Route exact path="/" component={About} />
             <Route path="/resume" component={Resume} />
@@ -29,7 +21,6 @@ function App() {
             <Route path="/contact" component={Contact} />
           </Switch>
         </div>
-      </ThemeProvider>
     </BrowserRouter>
   );
 }
