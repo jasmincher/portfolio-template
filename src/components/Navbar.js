@@ -19,7 +19,6 @@ const drawerWidth = 240;
 // ************ start of styles ************
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: "flex",
     "& a": {
       textDecoration: "none",
       marginRight: "20px",
@@ -30,6 +29,7 @@ const useStyles = makeStyles((theme) => ({
       textDecoration: "none",
       color: "blue",
     },
+
   },
 
   grow: {
@@ -51,12 +51,16 @@ const useStyles = makeStyles((theme) => ({
 
   appBarRoot: {
     [theme.breakpoints.up("sm")]: {
-      background: "inherit",
+      // background: "inherit",
+      background: "black",
+
       boxShadow: "none",
     },
 
     [theme.breakpoints.down("xs")]: {
-      background: "inherit",
+      // background: "inherit",
+      background: "black",
+
       boxShadow: "none",
       borderBottom: "1px black solid",
     },
@@ -69,7 +73,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 
-  toolbar: theme.mixins.toolbar,
+  // toolbar: theme.mixins.toolbar,
 
   drawerPaper: {
     width: drawerWidth,
@@ -84,9 +88,9 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 
-  content: {
-    padding: theme.spacing(2),
-  },
+  // content: {
+  //   padding: theme.spacing(2),
+  // },
 }));
 
 // ************ end of styles ************
@@ -151,7 +155,7 @@ function Navbar(props) {
       <CssBaseline />
 
       {/* Appbar is similar to a navbar */}
-      <AppBar position="fixed" classes={{ root: classes.appBarRoot }}>
+      <AppBar position="static" classes={{ root: classes.appBarRoot }}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -201,10 +205,10 @@ function Navbar(props) {
       </nav>
 
       {/* content for links in appbar */}
-      <main className={classes.content}>
+      {/* <main className={classes.content}>
         <div className={classes.toolbar} />
         {props.children}
-      </main>
+      </main> */}
     </div>
   );
 }
