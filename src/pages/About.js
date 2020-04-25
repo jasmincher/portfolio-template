@@ -1,17 +1,17 @@
 import React from "react";
 import avatar from "../assets/images/avatar.jpg";
 import "../css/About.css";
+import Header from '../components/Header';
 
 function About() {
   return (
     <div className="about-container">
-      <div className="about-heading">
-        <h1>About Me</h1>
-      </div>
       
-      <img src={avatar} className="profile-img" />
+    <Header heading="About Me" subheading="Learn more about me"/>
+      
+      <img src={avatar} className="profile-img"/>
+    <div className="about-info">
 
-      <div className="about-info">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
