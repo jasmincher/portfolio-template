@@ -1,7 +1,7 @@
 import React from "react";
 import './App.css';
 import Navbar from "./components/Navbar";
-import About from "./pages/About";
+import Home from "./pages/Home";
 import Resume from "./pages/Resume";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
@@ -15,7 +15,7 @@ function App() {
         <div className="App">
           <Navbar />
           <Switch>
-            <Route exact path="/" component={About} />
+            <Route exact path="/" component={Home} />
             <Route path="/resume" component={Resume} />
             <Route path="/projects" component={Projects} />
             <Route path="/contact" component={Contact} />
