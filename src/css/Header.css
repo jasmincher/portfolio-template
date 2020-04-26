@@ -1,50 +1,83 @@
-.header-container{
-    background: black;
-    color: white;
-    padding: 100px 0;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 40px));   
+.header-container {
+  display: grid;
+  background: black;
+  color: white;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 35px));
+  padding: 60px 0 80px 0;
 }
 
-
-.header-container h1{
-    font-size: 60px;
+.header-container h1 {
+  font-size: 40px;
+  font-weight: 400;
+  margin: 0 20px;
 }
 
-.header-container h6{
-    font-size: 20px;
-    font-weight: lighter;
+.header-container h6 {
+  font-size: 20px;
+  font-weight: lighter;
+  margin: 20px;
 }
-
 
 /* viewport 4 : Mobile-landscape (and larger) */
 @media (min-width: 480px) {
-    .header-container{
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 50px));
+  .header-container {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 50px));
+    padding: 70px 0 100px 0;
+  }
 
-    }
+  .header-container h1 {
+    font-size: 50px;
+  }
+
+  .header-container h6 {
+    font-size: 25px;
+  }
 }
 
 /* viewport 7 : Tablet-portrait (and larger) */
 @media (min-width: 768px) {
-    .header-container{
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 60px));
+  .header-container {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 60px));
+    padding: 70px 0 120px 0;
+  }
 
-    }
+  .header-container h1 {
+    font-size: 60px;
+  }
+
+  .header-container h6 {
+    font-size: 25px;
+  }
 }
 
 /* viewport 9 : Table-landscape (and larger) */
 @media (min-width: 992px) {
-    .header-container{
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 80px));
+  .header-container {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 60px));
+    padding: 80px 0 140px 0;
+  }
 
-    }
+  .header-container h1 {
+    font-size: 65px;
+  }
+
+  .header-container h6 {
+    font-size: 30px;
+  }
 }
 
 /* viewport 12 : Laptops (and larger)  */
 @media (min-width: 1200px) {
-    .header-container{
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 100px));
+  .header-container {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 80px));
+    padding: 100px 0 170px 0;
+  }
 
-    }
-    
+  .header-container h1 {
+    font-size: 70px;
+  }
+
+  .header-container h6 {
+    font-size: 35px;
+  }
 }
