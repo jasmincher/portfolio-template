@@ -1,42 +1,49 @@
-.about-container{
-    display: grid;
+.profile-img {
+  width: 200px;
+  border-radius: 100%;
+  margin: 30px auto 0 auto;
 }
 
-.profile-img{
-    width: 200px;
-    border-radius: 100%;
-    margin: 30px auto;
-
+.about-info {
+  background: #fafafa;
+  /* margin: auto; */
+  text-align: center;
+  font-size: 20px;
+  line-height: 35px;
+  font-weight: lighter;
+  padding: 5% 7% 10% 7%;
 }
 
-.about-info{
-    background: #fafafa;
-    text-align: left;
-    padding: 0 20%;
-    
-}    
-                
-
+.about-info h1 {
+  font-weight: 400;
+}
 
 /********** Responsive Styles **********/
 
 /* viewport 4 : Mobile-landscape (and larger) */
 @media (min-width: 480px) {
-    
+  .about-info {
+    padding: 5% 7% 10% 7%;
   }
-  
-  /* viewport 7 : Tablet-portrait (and larger) */
-  @media (min-width: 768px) {
-    
+}
+
+/* viewport 7 : Tablet-portrait (and larger) */
+@media (min-width: 768px) {
+  .about-info {
+    padding: 5% 7% 10% 7%;
   }
-  
-  /* viewport 9 : Table-landscape (and larger) */
-  @media (min-width: 992px) {
-    
+}
+
+/* viewport 9 : Table-landscape (and larger) */
+@media (min-width: 992px) {
+  .about-info {
+    padding: 3% 10%;
   }
-  
-  /* viewport 12 : Laptops (and larger)  */
-  @media (min-width: 1200px) {
-    
+}
+
+/* viewport 12 : Laptops (and larger)  */
+@media (min-width: 1200px) {
+  .about-info {
+    padding: 3% 15%;
   }
-  
+}
