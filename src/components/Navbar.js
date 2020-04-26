@@ -12,7 +12,7 @@ import {
   makeStyles,
   useTheme,
 } from "@material-ui/core/";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const drawerWidth = 240;
 
@@ -21,44 +21,45 @@ const useStyles = makeStyles((theme) => ({
   root: {
     "& a": {
       textDecoration: "none",
-      marginRight: "20px",
+      margin: "30px 40px 30px 0",
       color: "white",
-      padding: "7px 0",
-      border: '2px solid transparent',
-      borderRadius: '5px',
+      fontSize:"20px",
+      fontWeight: "lighter",
+
+      "&:last-of-type":{
+        marginRight: "10px"
+      },
+
+      "&::after": {
+        marginTop: "5px",
+        borderRadius: "5px",
+        width: "0%",
+        height: "5px",
+        display: "block",
+        backgroundColor: "#0567b3",
+        content: "' '",
+        transition:
+          "left 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.3s cubic-bezier(0.215, 0.61, 0.355, 1)",
+      },
+
+      "&:hover": {
+        textDecoration: "none",
+
+        "&::after": {
+          width: "100%",
+          height: "5px",
+          display: "block",
+          content: "' '",
+    
+        },
+      },
     },
+  },
 
-
-    "& a::after": {
-      width: "0%",
-      height: "5px",
-      display: "block",
-      backgroundColor: "blue",
-      content: "' '",
-      transition:
-      "left 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.2s cubic-bezier(0.215, 0.61, 0.355, 1)",
-      // position: 'absolute',
-      // top: "34px",
-      // left: "50%",
+  activeLink: {
+    "&::after": {
+      width: "100% !important",
     },
-
-    "& a:hover": {
-      textDecoration: "none",
-      // color: "#9c9c9c",
-    },
-
-    "& a:hover::after": {
-      width: "60%",
-      height: "5px",
-      display: "block",
-      backgroundColor: "#4116db",
-      content: "' '",
-      // display: "flex",
-      // top: "34px",
-      // position: 'absolute',
-      // left: "0",
-    },
-
   },
 
   grow: {
@@ -80,16 +81,12 @@ const useStyles = makeStyles((theme) => ({
 
   appBarRoot: {
     [theme.breakpoints.up("sm")]: {
-      // background: "inherit",
       background: "black",
-
       boxShadow: "none",
     },
 
     [theme.breakpoints.down("xs")]: {
-      // background: "inherit",
       background: "black",
-
       boxShadow: "none",
       borderBottom: "1px black solid",
     },
@@ -101,8 +98,6 @@ const useStyles = makeStyles((theme) => ({
       display: "none",
     },
   },
-
-  // toolbar: theme.mixins.toolbar,
 
   drawerPaper: {
     width: drawerWidth,
@@ -117,9 +112,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 
-  // content: {
-  //   padding: theme.spacing(2),
-  // },
 }));
 
 // ************ end of styles ************
@@ -148,32 +140,32 @@ function Navbar(props) {
     setState({ ...state, [side]: open });
   };
 
-  //This content will display navigation links
+  //This content will display navigation links on drawer
   const drawer = (
     <div>
       {/* when drawer is open, onClick of each link, the drawer will close */}
       <List alignItems="center">
         <ListItem>
-          <Link exact to="/" onClick={toggleDrawer("left", false)}>
-            About
-          </Link>
+          <NavLink exact to="/" onClick={toggleDrawer("left", false)}>
+           Home
+          </NavLink>
         </ListItem>
 
         <ListItem>
-          <Link to="/resume" onClick={toggleDrawer("left", false)}>
+          <NavLink to="/resume" onClick={toggleDrawer("left", false)}>
             Resume
-          </Link>
+          </NavLink>
         </ListItem>
         <ListItem>
-          <Link to="/projects" onClick={toggleDrawer("left", false)}>
+          <NavLink to="/projects" onClick={toggleDrawer("left", false)}>
             Projects
-          </Link>
+          </NavLink>
         </ListItem>
 
         <ListItem>
-          <Link to="/contact" onClick={toggleDrawer("left", false)}>
+          <NavLink to="/contact" onClick={toggleDrawer("left", false)}>
             Contact
-          </Link>
+          </NavLink>
         </ListItem>
       </List>
     </div>
@@ -203,10 +195,18 @@ function Navbar(props) {
             {/* this pushes navlinks to the right */}
             <div className={classes.grow} />
 
-            <Link to="/">About</Link>
-            <Link to="/resume">Resume</Link>
-            <Link to="/projects">Projects</Link>
-            <Link to="/contact">Contact</Link>
+            <NavLink exact to="/" activeClassName={classes.activeLink}>
+              Home
+            </NavLink>
+            <NavLink to="/resume" activeClassName={classes.activeLink}>
+              Resume
+            </NavLink>
+            <NavLink to="/projects" activeClassName={classes.activeLink}>
+              Projects
+            </NavLink>
+            <NavLink to="/contact" activeClassName={classes.activeLink}>
+              Contact
+            </NavLink>
           </Hidden>
         </Toolbar>
       </AppBar>
@@ -231,12 +231,6 @@ function Navbar(props) {
           </Drawer>
         </Hidden>
       </nav>
-
-      {/* content for links in appbar */}
-      {/* <main className={classes.content}>
-        <div className={classes.toolbar} />
-        {props.children}
-      </main> */}
     </div>
   );
 }
