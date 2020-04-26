@@ -24,10 +24,39 @@ const useStyles = makeStyles((theme) => ({
       marginRight: "20px",
       color: "white",
       padding: "7px 0",
+      border: '2px solid transparent',
+      borderRadius: '5px',
     },
+
+
+    "& a::after": {
+      width: "0%",
+      height: "5px",
+      display: "block",
+      backgroundColor: "blue",
+      content: "' '",
+      transition:
+      "left 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.2s cubic-bezier(0.215, 0.61, 0.355, 1)",
+      // position: 'absolute',
+      // top: "34px",
+      // left: "50%",
+    },
+
     "& a:hover": {
       textDecoration: "none",
-      color: "blue",
+      // color: "#9c9c9c",
+    },
+
+    "& a:hover::after": {
+      width: "60%",
+      height: "5px",
+      display: "block",
+      backgroundColor: "#4116db",
+      content: "' '",
+      // display: "flex",
+      // top: "34px",
+      // position: 'absolute',
+      // left: "0",
     },
 
   },
@@ -80,11 +109,11 @@ const useStyles = makeStyles((theme) => ({
     background: "white",
     paddingTop: "15px",
     "& a": {
-      color: 'black',
+      color: "black",
       marginBottom: "20px",
       marginLeft: "10px",
       fontSize: "20px",
-      textDecoration: "none"
+      textDecoration: "none",
     },
   },
 
@@ -178,7 +207,6 @@ function Navbar(props) {
             <Link to="/resume">Resume</Link>
             <Link to="/projects">Projects</Link>
             <Link to="/contact">Contact</Link>
-            
           </Hidden>
         </Toolbar>
       </AppBar>
