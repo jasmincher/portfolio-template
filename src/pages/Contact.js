@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
 import '../css/Contact.css';
+import Header from '../components/Header';
+
 
 const emailRegex = RegExp(
   /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
@@ -100,6 +102,7 @@ class Contact extends React.Component {
 
 
 
+<Header heading="Contact Me" subheading="You can email me directly or connect with me via social media" />
 
 
      <div>{this.state.success[0]}</div>
