@@ -2,8 +2,49 @@
     background: black;
     color: white;
     padding: 100px 0;
-    /* height: 100vh; */
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 100px));
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 40px));   
+}
 
 
+.header-container h1{
+    font-size: 60px;
+}
+
+.header-container h6{
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+
+/* viewport 4 : Mobile-landscape (and larger) */
+@media (min-width: 480px) {
+    .header-container{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 50px));
+
+    }
+}
+
+/* viewport 7 : Tablet-portrait (and larger) */
+@media (min-width: 768px) {
+    .header-container{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 60px));
+
+    }
+}
+
+/* viewport 9 : Table-landscape (and larger) */
+@media (min-width: 992px) {
+    .header-container{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 80px));
+
+    }
+}
+
+/* viewport 12 : Laptops (and larger)  */
+@media (min-width: 1200px) {
+    .header-container{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 100px));
+
+    }
+    
 }
