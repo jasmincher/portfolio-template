@@ -1,25 +1,25 @@
 .blurb-container {
     display: grid;
     grid-template-columns: auto;
-    margin: 10% 10%;
+    margin: 15% 10%;
   }
   
   .blurb-img {
     order: 1; /*swaps position for image to be on top*/
-    justify-self: center;
+    margin: auto;
+    align-self: center;
     margin-bottom: 30px;
-    box-shadow: black 0 0 40px;
-    width: 100%;
-
-
+    box-shadow: rgba(0, 0, 0, 0.228) 0 0 30px 10px;
+    width: 80%;
+    
   }
   
   .blurb-text {
     order: 2; /*swaps position for text to be on the bottom*/
-    text-align: left;
+    text-align: center;
     line-height: 30px;
     font-size: 15px;
-    padding: 0 30px;
+    margin: auto;
   }
   
   /********** Responsive Styles **********/
@@ -29,11 +29,10 @@
     .blurb-container {
       display: grid;
     }
-  
+    
     .blurb-img {
       order: 1; /*swaps position for image to be on top*/
-      justify-self: center;
-      margin-bottom: 30px;
+      margin-bottom: 50px;
     }
   }
   
@@ -42,28 +41,32 @@
     .blurb-container {
       grid-template-columns: 50% 50%;
     }
-  
+    
     .blurb-img {
       order: initial; /*resets position of image */
-      margin-bottom: initial;
+      margin: initial;
+      width: 100%;
+      align-items: center;
     }
   
     .blurb-text {
       order: initial; /*resets position of text */
-    }
+      padding: 0 35px;
+ 
+      }
   }
   
   /* viewport 9 : Table-landscape (and larger) */
   @media (min-width: 992px) {
-    .blurb-container {
-      grid-template-columns: 50% 50%;
+    .blurb-text {
+      padding: 0 50px;
     }
   }
   
   /* viewport 12 : Laptops (and larger)  */
   @media (min-width: 1200px) {
-    .blurb-container {
-      grid-template-columns: 50% 50%;
+    .blurb-text {
+      padding: 0 60px;
     }
   }
   
