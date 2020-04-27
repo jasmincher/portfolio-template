@@ -1,5 +1,8 @@
 import React from "react";
-import avatar from "../assets/images/avatar.jpg";
+import stephen from "../assets/images/stephen.jpeg";
+import stephen2 from "../assets/images/stephen2.jpeg";
+import stephen3 from "../assets/images/stephen3.jpeg";
+
 import "../css/Home.css";
 import Header from "../components/Header";
 
@@ -8,7 +11,8 @@ function Home() {
     <div className="about-container">
       <Header heading="Stephen Sarfo" subheading="Learn more about me" />
 
-      <img src={avatar} className="profile-img" />
+        <img src={stephen2} className="profile-img" />
+ 
       <div className="about-info">
         <h1>About Me</h1>
         <p>
