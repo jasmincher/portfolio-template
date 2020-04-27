@@ -1,8 +1,9 @@
 import React from "react";
 import axios from "axios";
-import '../css/Contact.css';
-import Header from '../components/Header';
-
+import "../css/Contact.css";
+import Header from "../components/Header";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
 
 const emailRegex = RegExp(
   /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
@@ -99,70 +100,58 @@ class Contact extends React.Component {
 
     return (
       <div className="form-container">
+        <Header
+          heading="Contact Me"
+          subheading="You can email me directly or connect with me via social media"
+        />
 
+        <div className="social-icons">
+         <a href="https://github.com/Stephen8898" target="_blank"> {<GitHubIcon id="github-icon"/>} </a>
+        <a href="https://www.linkedin.com/in/stephen-sarfo98/" target="_blank"> <LinkedInIcon id="linkedin-icon"/> </a>
+        </div>
 
-
-<Header heading="Contact Me" subheading="You can email me directly or connect with me via social media" />
-
-
-     <div>{this.state.success[0]}</div>
-
+        <div className="email-submission">{this.state.success[0]}</div>
 
         <form onSubmit={this.handleSubmit} className="mail-form" noValidate>
-          
-          
           <div id="item1">
-
-          <label>Name</label>
-          <input
-            className={errors.name.length > 0 ? "error" : null}
-            type="text"
-            name="name"
-            noValidate
-            onChange={this.handleChange}
+            <label>Name</label>
+            <input
+              className={errors.name.length > 0 ? "error" : null}
+              type="text"
+              name="name"
+              noValidate
+              onChange={this.handleChange}
             />
-            </div>
+          </div>
 
-            <div id="item2">
-
-         
-          <label>Email</label>
-          <input
-            className={errors.email.length > 0 ? "error" : null}
-            type="email"
-            name="email"
-            noValidate
-            onChange={this.handleChange}
+          <div id="item2">
+            <label>Email</label>
+            <input
+              className={errors.email.length > 0 ? "error" : null}
+              type="email"
+              name="email"
+              noValidate
+              onChange={this.handleChange}
             />
-            </div>
+          </div>
 
-        <div id="item3">
-
-
-          <label>Message</label>
-          <textarea
-            className={
-                errors.message.length > 0
-                ? "error"
-                : null
-            }
-            type="textarea"
-            name="message"
-            noValidate
-            onChange={this.handleChange}
+          <div id="item3">
+            <label>Message</label>
+            <textarea
+              className={errors.message.length > 0 ? "error" : null}
+              type="textarea"
+              name="message"
+              noValidate
+              onChange={this.handleChange}
             ></textarea>
-
-            </div>
-        
+          </div>
 
           <input type="hidden" name="_gotcha"></input>
           <button type="submit" className="form-btn">
-            Submit
+            Send Message
           </button>
         </form>
       </div>
-
-      
     );
   }
 }
