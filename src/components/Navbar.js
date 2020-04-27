@@ -19,6 +19,7 @@ const drawerWidth = 240;
 // ************ start of styles ************
 const useStyles = makeStyles((theme) => ({
   root: {
+    // styles links in navigation bar
     "& a": {
       textDecoration: "none",
       margin: "30px 40px 30px 0",
@@ -39,79 +40,96 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: "#0567b3",
         content: "' '",
         transition:
-          "left 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.3s cubic-bezier(0.215, 0.61, 0.355, 1)",
+        "left 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.3s cubic-bezier(0.215, 0.61, 0.355, 1)",
       },
-
+      
       "&:hover": {
         textDecoration: "none",
-
+        
         "&::after": {
           width: "100%",
           height: "5px",
           display: "block",
           content: "' '",
-    
+          
         },
       },
     },
   },
-
+  
+  
+  // styles active links on navigation bar
   activeLink: {
     "&::after": {
       width: "100% !important",
     },
   },
-
-  grow: {
-    flexGrow: 1,
+  
+  
+  //styles active links in drawer
+  active: {
+    borderBottom: '2px solid #0567b3 !important',
+    padding: '0'
   },
+  
+  
+  
+  //styles drawer
+  drawerPaper: {
+    width: drawerWidth,
+    background: "white",
+    paddingTop: "15px",
+    "& a": {
+      width: '100%',
+      color: "black",
+      marginBottom: "20px",
+      paddingBottom: "10px",
+      fontSize: "20px",
+      textDecoration: "none",
+      borderBottom: "2px solid rgba(0,0,0, 0.17)",
 
+    },
+  },
+  
   drawer: {
     [theme.breakpoints.up("sm")]: {
       width: drawerWidth,
       flexShrink: 0,
     },
   },
+  
   appBar: {
     [theme.breakpoints.up("sm")]: {
       width: `calc(100% - ${drawerWidth}px)`,
       marginLeft: drawerWidth,
     },
   },
-
+  
   appBarRoot: {
     [theme.breakpoints.up("sm")]: {
-      background: "black",
+      background: "#070124",
       boxShadow: "none",
     },
-
+    
     [theme.breakpoints.down("xs")]: {
-      background: "black",
+      background: "#070124",
       boxShadow: "none",
-      borderBottom: "1px black solid",
+      borderBottom: "2px solid rgba(255,255,255, 0.12)",
     },
   },
-
+  
   menuButton: {
     marginRight: theme.spacing(2),
     [theme.breakpoints.up("sm")]: {
       display: "none",
     },
   },
-
-  drawerPaper: {
-    width: drawerWidth,
-    background: "white",
-    paddingTop: "15px",
-    "& a": {
-      color: "black",
-      marginBottom: "20px",
-      marginLeft: "10px",
-      fontSize: "20px",
-      textDecoration: "none",
-    },
+  
+  grow: {
+    flexGrow: 1,
   },
-
+  
+  
 }));
 
 // ************ end of styles ************
@@ -146,24 +164,24 @@ function Navbar(props) {
       {/* when drawer is open, onClick of each link, the drawer will close */}
       <List alignItems="center">
         <ListItem>
-          <NavLink exact to="/" onClick={toggleDrawer("left", false)}>
+          <NavLink exact to="/" activeClassName={classes.active} onClick={toggleDrawer("left", false)}>
            Home
           </NavLink>
         </ListItem>
 
         <ListItem>
-          <NavLink to="/resume" onClick={toggleDrawer("left", false)}>
+          <NavLink to="/resume" activeClassName={classes.active} onClick={toggleDrawer("left", false)}>
             Resume
           </NavLink>
         </ListItem>
         <ListItem>
-          <NavLink to="/projects" onClick={toggleDrawer("left", false)}>
+          <NavLink to="/projects" activeClassName={classes.active} onClick={toggleDrawer("left", false)}>
             Projects
           </NavLink>
         </ListItem>
 
         <ListItem>
-          <NavLink to="/contact" onClick={toggleDrawer("left", false)}>
+          <NavLink to="/contact" activeClassName={classes.active} onClick={toggleDrawer("left", false)}>
             Contact
           </NavLink>
         </ListItem>
