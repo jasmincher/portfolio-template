@@ -194,7 +194,7 @@ function Navbar(props) {
       <CssBaseline />
 
       {/* Appbar is similar to a navbar */}
-      <AppBar position="static" classes={{ root: classes.appBarRoot }}>
+      <AppBar position="fixed" classes={{ root: classes.appBarRoot }}>
         <Toolbar>
           <IconButton
             color="inherit"
