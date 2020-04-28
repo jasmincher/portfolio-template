@@ -2,7 +2,7 @@
   "name": "stephen-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http:stephen8898.github.io/stephen-portfolio",
+  "homepage": "https:stephen8898.github.io/stephen-portfolio",
   "dependencies": {
     "@material-ui/core": "^4.9.11",
     "@material-ui/icons": "^4.9.1",
