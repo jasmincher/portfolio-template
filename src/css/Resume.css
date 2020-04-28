@@ -1,39 +1,12 @@
 .resume-container {
+  overflow: hidden;
 }
-
 .resume-pdf {
-  height: 100vh;
-  width: 100%;
-  border: none;
+  display: flex;
+  justify-content: center;
 }
 
-/*********** Responsive Styles *********/
-
-
-/* viewport 4 : Mobile-landscape (and larger) */
-@media (min-width: 480px) {
-  .resume-pdf {
-    width: 100%;
-  }
-}
-
-/* viewport 7 : Tablet-portrait (and larger) */
-@media (min-width: 768px) {
-  .resume-pdf {
-    width: 80%;
-  }
-}
-
-/* viewport 9 : Table-landscape (and larger) */
-@media (min-width: 992px) {
-  .resume-pdf {
-    width: 80%;
-  }
-}
-
-/* viewport 12 : Laptops (and larger)  */
-@media (min-width: 1200px) {
-  .resume-pdf {
-    width: 60%;
-  }
+.pdf-page {
+  box-shadow: rgba(0, 0, 0, 0.315) 0 0 50px 10px;
+  margin: 40px 0;
 }
