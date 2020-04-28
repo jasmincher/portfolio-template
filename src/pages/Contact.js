@@ -78,9 +78,10 @@ class Contact extends React.Component {
     let errors = { ...this.state.errors };
     console.log(errors);
 
+    //error messages will be set based on condition
     switch (name) {
       case "name":
-        errors.name = value.length < 2 ? "Name is too short" : "";
+        errors.name = value.length < 1 ? "Name is required" : "";
         break;
       case "email":
         errors.email = emailRegex.test(value) ? "" : "Invalid email";
@@ -106,13 +107,21 @@ class Contact extends React.Component {
         />
 
         <div className="social-icons">
-         <a href="https://github.com/Stephen8898" target="_blank"> {<GitHubIcon id="github-icon"/>} </a>
-        <a href="https://www.linkedin.com/in/stephen-sarfo98/" target="_blank"> <LinkedInIcon id="linkedin-icon"/> </a>
+          <a href="https://github.com/Stephen8898" target="_blank">
+            {<GitHubIcon id="github-icon" />}
+          </a>
+          <a
+            href="https://www.linkedin.com/in/stephen-sarfo98/"
+            target="_blank"
+          >
+            <LinkedInIcon id="linkedin-icon" />
+          </a>
         </div>
 
         <div className="email-submission">{this.state.success[0]}</div>
 
         <form onSubmit={this.handleSubmit} className="mail-form" noValidate>
+         {/* name field */}
           <div id="item1">
             <label>Name</label>
             <input
@@ -122,8 +131,13 @@ class Contact extends React.Component {
               noValidate
               onChange={this.handleChange}
             />
+            {errors.name.length > 0 && (
+              <div className="field-status">{errors.name}</div>
+            )}
           </div>
 
+
+            {/* email field */}
           <div id="item2">
             <label>Email</label>
             <input
@@ -133,8 +147,14 @@ class Contact extends React.Component {
               noValidate
               onChange={this.handleChange}
             />
+
+            {errors.email.length > 0 && (
+              <div className="field-status">{errors.email}</div>
+            )}
           </div>
 
+
+                {/* message field */}
           <div id="item3">
             <label>Message</label>
             <textarea
@@ -144,8 +164,13 @@ class Contact extends React.Component {
               noValidate
               onChange={this.handleChange}
             ></textarea>
-          </div>
 
+            {errors.message.length > 0 && (
+              <div className="field-status">{errors.message}</div>
+            )}
+          </div>
+            
+            {/* for spambots */}
           <input type="hidden" name="_gotcha"></input>
           <button type="submit" className="form-btn">
             Send Message
