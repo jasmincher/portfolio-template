@@ -11,7 +11,7 @@ function Home() {
     <div className="about-container">
       <Header heading="Stephen Sarfo" subheading="Learn more about me" />
 
-        <img src={stephen2} className="profile-img" />
+        <img src={stephen2} alt="profile" className="profile-img" />
  
       <div className="about-info">
         <h1>About Me</h1>
