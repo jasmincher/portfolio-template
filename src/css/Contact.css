@@ -5,21 +5,28 @@ form {
 }
 
 .form-btn {
-  padding: 10px 20px;
   display: block;
   margin: auto;
+  margin-top: 10px;
+  padding: 12px 25px;
+  border-radius: 8px;
+  border: none;
+  background: #2B2D42;
+  color: white;
   font-size: 15px;
-  border-radius: 5px;
-  background: white;
+  font-weight: 500;
+  transition: 0.5s;
+
 }
 
 .form-btn:hover {
-  background: rgb(235, 235, 235);
+  background: #92DCE5;
 }
 
 .email-submission {
   margin-top: 20px;
   font-size: 15px;
+  font-weight: 600;
 }
 
 .error {
@@ -30,7 +37,6 @@ form {
   color: red;
   font-size: 10px;
   margin-bottom: 16px;
-
 }
 
 input,
