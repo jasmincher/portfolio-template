@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
         width: "0%",
         height: "5px",
         display: "block",
-        backgroundColor: "#0567b3",
+        backgroundColor: "#92DCE5",
         content: "' '",
         transition:
         "left 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.3s cubic-bezier(0.215, 0.61, 0.355, 1)",
@@ -68,7 +68,7 @@ const useStyles = makeStyles((theme) => ({
   
   //styles active links in drawer
   active: {
-    borderBottom: '2px solid #0567b3 !important',
+    borderBottom: '2px solid #92DCE5 !important',
     padding: '0'
   },
   
@@ -107,12 +107,12 @@ const useStyles = makeStyles((theme) => ({
   
   appBarRoot: {
     [theme.breakpoints.up("sm")]: {
-      background: "#070124",
+      background: "#2B2D42",
       boxShadow: "none",
     },
     
     [theme.breakpoints.down("xs")]: {
-      background: "#070124",
+      background: "#2B2D42",
       boxShadow: "none",
       borderBottom: "2px solid rgba(255,255,255, 0.12)",
     },
