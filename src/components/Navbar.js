@@ -164,7 +164,7 @@ function Navbar(props) {
       {/* when drawer is open, onClick of each link, the drawer will close */}
       <List alignItems="center">
         <ListItem>
-          <NavLink exact to="/stephen-portfolio" activeClassName={classes.active} onClick={toggleDrawer("left", false)}>
+          <NavLink exact to="/stephen-portfolio-1" activeClassName={classes.active} onClick={toggleDrawer("left", false)}>
            Home
           </NavLink>
         </ListItem>
