@@ -26,14 +26,20 @@ form {
   border: 2px red solid;
 }
 
+.field-status {
+  color: red;
+  font-size: 10px;
+  margin-bottom: 16px;
+
+}
+
 input,
 textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  margin-top: 6px;
-  margin-bottom: 16px;
+  margin: 5px 0;
   font-size: 15px;
 }
 
@@ -108,6 +114,7 @@ label {
 @media (min-width: 768px) {
   form {
     display: grid;
+    width: 80%;
     gap: 20px;
     grid-template-areas:
       "item1 item2"
@@ -143,10 +150,17 @@ label {
     align-self: center;
   }
 }
+
 /* viewport 9 : Table-landscape (and larger) */
 @media (min-width: 992px) {
+  form {
+    width: 70%;
+  }
 }
 
 /* viewport 12 : Laptops (and larger)  */
 @media (min-width: 1200px) {
+  form {
+    width: 60%;
+  }
 }
