@@ -1,7 +1,6 @@
 .header-container {
   display: grid;
-  /* background: black; */
-  background: #070124;
+  background: #2B2D42;
   color: white;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 35px));
   padding: 60px 0 80px 0;
