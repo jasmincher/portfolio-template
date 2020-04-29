@@ -77,11 +77,11 @@ const useStyles = makeStyles((theme) => ({
   //styles drawer
   drawerPaper: {
     width: drawerWidth,
-    background: "white",
+    background: "#2B2D42",
     paddingTop: "15px",
     "& a": {
       width: '100%',
-      color: "black",
+      color: "white",
       marginBottom: "20px",
       paddingBottom: "10px",
       fontSize: "20px",
@@ -104,7 +104,9 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: drawerWidth,
     },
   },
-  
+
+
+  //styles navbar
   appBarRoot: {
     [theme.breakpoints.up("sm")]: {
       background: "#2B2D42",
@@ -114,7 +116,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("xs")]: {
       background: "#2B2D42",
       boxShadow: "none",
-      borderBottom: "2px solid rgba(255,255,255, 0.12)",
+      borderBottom: "2px solid rgba(0,0,0, 0.17)",
     },
   },
   
