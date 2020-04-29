@@ -213,7 +213,7 @@ function Navbar(props) {
             {/* this pushes navlinks to the right */}
             <div className={classes.grow} />
 
-            <NavLink exact to="/" activeClassName={classes.activeLink}>
+            <NavLink exact to="/stephen-portfolio-1" activeClassName={classes.activeLink}>
               Home
             </NavLink>
             <NavLink to="/resume" activeClassName={classes.activeLink}>
