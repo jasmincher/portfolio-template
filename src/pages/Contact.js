@@ -48,7 +48,6 @@ class Contact extends React.Component {
     if (isFormValid(this.state)) {
       e.target.reset();
       this.setState({ success: ["Email Sent", true] });
-      console.log("Form submission successful!");
 
       //if form fields are filled in correctly then we submit form
 
@@ -61,14 +60,11 @@ class Contact extends React.Component {
           }
         )
         .then(function (res) {
-          console.log(res);
         })
         .catch(function (err) {
-          console.log(err);
         });
     } else {
       this.setState({ success: ["Fill in all fields", false] });
-      console.error("Form submission unsuccessful");
     }
   };
 
@@ -76,8 +72,6 @@ class Contact extends React.Component {
     e.preventDefault();
     const { name, value } = e.target;
     let errors = { ...this.state.errors };
-    console.log(errors);
-
     //error messages will be set based on condition
     switch (name) {
       case "name":
