@@ -166,7 +166,7 @@ function Navbar(props) {
       {/* when drawer is open, onClick of each link, the drawer will close */}
       <List alignItems="center">
         <ListItem>
-          <NavLink exact to="/stephen-portfolio-1" activeClassName={classes.active} onClick={toggleDrawer("left", false)}>
+          <NavLink exact to="/" activeClassName={classes.active} onClick={toggleDrawer("left", false)}>
            Home
           </NavLink>
         </ListItem>
@@ -210,12 +210,10 @@ function Navbar(props) {
 
           {/* Appbar text will be hidden at breakpoint xsmall and down */}
           <Hidden xsDown>
-            {/* Stephen */}
-
             {/* this pushes navlinks to the right */}
             <div className={classes.grow} />
 
-            <NavLink exact to="/stephen-portfolio-1" activeClassName={classes.activeLink}>
+            <NavLink exact to="/" activeClassName={classes.activeLink}>
               Home
             </NavLink>
             <NavLink to="/resume" activeClassName={classes.activeLink}>

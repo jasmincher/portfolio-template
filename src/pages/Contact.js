@@ -51,10 +51,13 @@ class Contact extends React.Component {
       console.log("Form submission successful!");
 
       //if form fields are filled in correctly then we submit form
+      
 
       axios
         .post(
-          "https://smartforms.dev/submit/5ea39d998a02626591cb5aa0",
+          //here you can use any program that handles form submissions
+          //I recommend smartforms.dev
+          "https://smartforms.dev/submit/",
           inputs,
           {
             headers: { Accept: "multipart/form-data" },
@@ -107,11 +110,11 @@ class Contact extends React.Component {
         />
 
         <div className="social-icons">
-          <a href="https://github.com/Stephen8898" target="_blank">
+          <a href="https://github.com/" target="_blank">
             {<GitHubIcon id="github-icon" />}
           </a>
           <a
-            href="https://www.linkedin.com/in/stephen-sarfo98/"
+            href="https://www.linkedin.com/"
             target="_blank"
           >
             <LinkedInIcon id="linkedin-icon" />

@@ -1,16 +1,17 @@
 import React from "react";
-import stephen2 from "../assets/images/stephen2.jpeg";
+import person from "../assets/images/person.jpg";
 import Info from "../assets/JS/Info";
-
 import "../css/Home.css";
 import Header from "../components/Header";
 
 function Home() {
   return (
     <div className="about-container">
-      <Header heading="Stephen Sarfo" subheading="Learn more about me" />
+      <Header heading="Jane Doe" subheading="Learn more about me" />
+      
+      {/* square images are ideal  */}
 
-      <img src={stephen2} alt="profile" className="profile-img" />
+      <img src={person} alt="profile" className="profile-img" />
 
       <div className="about-info">
         <h1>About Me</h1>
